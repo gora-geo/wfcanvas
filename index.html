@@ -27,6 +27,7 @@
 
     var girl;
 var timedEvent;
+var platforms;
 
     var game = new Phaser.Game(config);
 
@@ -47,8 +48,11 @@ var timedEvent;
         /*создаем размешаем фон координаты указаны по центру но можно по верхенму левому --
         this.add.image(0, 0, 'sky').setOrigin(0, 0)*/
 
+        platforms = this.physics.add.staticGroup();
+        platforms.create(0, 703, 'girl').setOrigin(0, 0);
+
         this.add.image(0, 0, 'backgraund').setOrigin(0, 0);
-       girl= this.add.image(0, 703, 'girl').setOrigin(0, 0);
+     /*  girl= this.add.image(0, 703, 'girl').setOrigin(0, 0);*/
         this.add.image(130, 469, 'labal1').setOrigin(0, 0);
         
          this.add.image(320, 670, 'strelka').setOrigin(0, 0);
@@ -62,10 +66,11 @@ timedEvent = this.time.delayedCall(5000, onEvent, [], this);
     {
     }
 
-    function onEvent (girl)
+    function onEvent ()
 {
     this.add.image(-30, 731, 'krug').setOrigin(0, 0);
-     girl.disableBody(true, true);
+    platforms.disableBody(true, true);
+     
 }
 
 </script>
