@@ -75,7 +75,10 @@ timedEvent = this.time.delayedCall(5000, onEvent, [], this);
         console.log(girl.Alpha);
        console.log(girl.globalAlpha);
        console.log(girl.opacity);
-        Phaser.Actions.SetAlpha(girl, 0, 1 / 50);
+        Phaser.Actions.SetAlpha(girl, 0.5, 0.5);
+        girl.globalAlpha = 0.5;
+        girl.Alpha = 0.5;
+        girl.SetAlpha = 0.5;
     }
 
     function onEvent ()
