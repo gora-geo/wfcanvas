@@ -30,9 +30,6 @@
     function preload ()
     {
         /*загружаем данные в загрузчик */
-         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-    game.scale.pageAlignHorizontally = true;
-    game.scale.pageAlignVertically = true;
         this.load.image('backgraund', 'sprites/1_0000s_0005_bg.jpg');
         this.load.image('girl', 'sprites/1_0000s_0001s_0000_Layer-981.png');
         this.load.image('labal1', 'sprites/1_0000s_0002_Group-9.png');
@@ -50,9 +47,10 @@
         this.add.image(0, 0, 'backgraund').setOrigin(0, 0);
         this.add.image(0, 703, 'girl').setOrigin(0, 0);
         this.add.image(130, 469, 'labal1').setOrigin(0, 0);
-        this.add.image(-30, 731, 'krug').setOrigin(0, 0);
+        
          this.add.image(320, 670, 'strelka').setOrigin(0, 0);
 
+timedEvent = this.time.delayedCall(5000, onEvent, [], this);
 
           
     }
@@ -60,6 +58,11 @@
     function update ()
     {
     }
+
+    function onEvent ()
+{
+    this.add.image(-30, 731, 'krug').setOrigin(0, 0);
+}
 
 </script>
 
