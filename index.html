@@ -30,6 +30,9 @@
     function preload ()
     {
         /*загружаем данные в загрузчик */
+         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    game.scale.pageAlignHorizontally = true;
+    game.scale.pageAlignVertically = true;
         this.load.image('backgraund', 'sprites/1_0000s_0005_bg.jpg');
         this.load.image('girl', 'sprites/1_0000s_0001s_0000_Layer-981.png');
         this.load.image('labal1', 'sprites/1_0000s_0002_Group-9.png');
