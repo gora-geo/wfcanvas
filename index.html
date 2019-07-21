@@ -56,10 +56,10 @@ var platforms;
         this.add.image(0, 0, 'sky').setOrigin(0, 0)*/
 
         platforms = this.physics.add.staticGroup();
-        platforms.create(100, 100, 'girl');
+        platforms.create(0, 703, 'girl').setOrigin(0, 0);
 
         this.add.image(0, 0, 'backgraund').setOrigin(0, 0);
-     /*  girl= this.add.image(0, 703, 'girl').setOrigin(0, 0);*/
+      girl= this.add.image(0, 703, 'girl').setOrigin(0, 0);
         this.add.image(130, 469, 'labal1').setOrigin(0, 0);
         
          this.add.image(320, 670, 'strelka').setOrigin(0, 0);
@@ -76,7 +76,10 @@ timedEvent = this.time.delayedCall(5000, onEvent, [], this);
     function onEvent ()
 {
     this.add.image(-30, 731, 'krug').setOrigin(0, 0);
-    platforms.disableBody(true, true);
+    girl.kill();
+    girl.destroy(true); 
+    girl = 'null';
+    
      
 }
 
