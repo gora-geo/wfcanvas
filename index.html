@@ -15,15 +15,22 @@
 <script type="text/javascript">
 
     var config = {
-        type: Phaser.CANVAS,
-        width: 768,
-        height: 1024,
-        scene: {
-            preload: preload,
-            create: create,
-            update: update
+    type: Phaser.AUTO,
+    width: 768,
+    height: 1024,
+    physics: {  /* подключение Arcade Physics, поддержку физики*/
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 300 },
+            debug: false
         }
-    };
+    },
+    scene: {
+        preload: preload,
+        create: create,
+        update: update
+    }
+};
 
     var girl;
 var timedEvent;
