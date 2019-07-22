@@ -81,7 +81,9 @@ timedEvent = this.time.delayedCall(5000, onEvent, [], this);
         girl.SetAlpha = 0.5;
         girl.rotate.x = 10;
         girl.rotate.y = 20;
-            girl.rotate.pivot.y = girl.x + 30;
+            girl.frame.pivotY =10;
+        girl.frame.pivotX =10;
+        girl.frame.rotated = 100;
     }
 
     function onEvent ()
