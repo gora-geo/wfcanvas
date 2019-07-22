@@ -108,6 +108,7 @@ timedEvent = this.time.delayedCall(5000, onEvent, [], this);
          girl.x = girl.x +10;
         strelka.y = strelka.y + 10;
         girl.alpha = girl.alpha-0.01;
+         Phaser.Actions.RotateAround( girl, { x: 400, y: 300 }, 0.01);
         
         /*
         console.log(girl.Alpha);
