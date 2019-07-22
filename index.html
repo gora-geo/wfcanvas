@@ -65,7 +65,7 @@ var platforms;
         
        strelka =  this.add.image(320, 670, 'strelka').setOrigin(0, 0);
         
-        this.static.add.overlap(girl, strelka, collectStar, null, this);
+        this.add.overlap(girl, strelka, collectStar, null, this);
 
 timedEvent = this.time.delayedCall(5000, onEvent, [], this);
 
