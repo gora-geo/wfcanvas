@@ -83,7 +83,24 @@ var platforms;
         /*
         girl.alpha = 0.5;
         */
-        this.add.image(130, 469, 'labal1').setOrigin(0, 0);
+      var label =  this.add.image(130, 469, 'labal1').setOrigin(0, 0);
+        label.on('pointerdown', function (pointer) {
+
+        console.log("down");
+
+    });
+
+    label.on('pointerout', function (pointer) {
+
+        console.log("out");
+
+    });
+
+    label.on('pointerup', function (pointer) {
+
+        console.log("up");
+
+    });
         
        strelka =  this.matter.add.image(320, 670, 'strelka').setOrigin(0, 0);
         
