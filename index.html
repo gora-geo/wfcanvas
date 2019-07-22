@@ -79,6 +79,7 @@ timedEvent = this.time.delayedCall(5000, onEvent, [], this);
         girl.globalAlpha = 0.5;
         girl.Alpha = 0.5;
         girl.SetAlpha = 0.5;
+        Phaser.Actions.RotateAround(girl, { x: 400, y: 300 }, 0.01);
     }
 
     function onEvent ()
