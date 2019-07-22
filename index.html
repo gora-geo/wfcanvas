@@ -74,6 +74,12 @@ timedEvent = this.time.delayedCall(5000, onEvent, [], this);
 
           
     }
+    
+    window.addEventListener('resize', function (event) {
+
+    game.scale.resize(window.innerWidth, window.innerHeight);
+
+}, false);
 
     function update ()
     {
