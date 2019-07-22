@@ -15,14 +15,14 @@
 <script type="text/javascript">
 
     var config = {
-    type: Phaser.WEBGL,
+    type: Phaser.AUTO,
     width: 768,
     height: 1024,
     scale: {
-        mode: Phaser.Scale.NONE,
+        mode: Phaser.Scale.HEIGHT_CONTROLS_WIDTH,
         parent: 'phaser-example',
-        width: window.innerWidth,
-        height: window.innerHeight
+        width: 800,
+        height: 600
     },
     physics: {  /* подключение Arcade Physics, поддержку физики*/
         default: 'arcade',
