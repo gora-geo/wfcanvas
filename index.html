@@ -90,7 +90,7 @@ var platforms;
         this.add.overlap(girl, strelka, collectStar, null, this);
         */
         
-        this.matter.world.on('collisionstart', function (event, girl, strelka) {
+        this.world.on('collisionstart', function (event, girl, strelka) {
 
        girl.gameObject.setTint(0xff0000);
         strelka.gameObject.setTint(0x00ff00);
