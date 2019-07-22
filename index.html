@@ -18,6 +18,12 @@
     type: Phaser.AUTO,
     width: 768,
     height: 1024,
+    scale: {
+        mode: Phaser.Scale.NONE,
+        parent: 'phaser-example',
+        width: window.innerWidth,
+        height: window.innerHeight
+    },
     physics: {  /* подключение Arcade Physics, поддержку физики*/
         default: 'arcade',
         arcade: {
