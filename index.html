@@ -35,6 +35,7 @@
     var girl;
 var timedEvent;
 var platforms;
+    var strelka;
 
     var game = new Phaser.Game(config);
 
@@ -62,7 +63,9 @@ var platforms;
       girl= this.add.image(0, 703, 'girl').setOrigin(0, 0);
         this.add.image(130, 469, 'labal1').setOrigin(0, 0);
         
-         this.add.image(320, 670, 'strelka').setOrigin(0, 0);
+       strelka =  this.add.image(320, 670, 'strelka').setOrigin(0, 0);
+        
+        this.physics.add.overlap(girl, strelka, collectStar, null, this);
 
 timedEvent = this.time.delayedCall(5000, onEvent, [], this);
 
@@ -71,7 +74,8 @@ timedEvent = this.time.delayedCall(5000, onEvent, [], this);
 
     function update ()
     {
-         /*girl.x = girl.x +10;*/
+         girl.x = girl.x +10;
+        strelka.y = strelka.y + 10;
         console.log(girl.Alpha);
        console.log(girl.globalAlpha);
        console.log(girl.opacity);
@@ -94,6 +98,10 @@ timedEvent = this.time.delayedCall(5000, onEvent, [], this);
     
      
 }
+    
+    function collectStar () {
+    console.log("huy");
+    }
 
 </script>
 
