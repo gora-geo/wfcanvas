@@ -83,7 +83,10 @@ var platforms;
         /*
         girl.alpha = 0.5;
         */
-      var label =  this.add.image(130, 469, 'labal1').setOrigin(0, 0);
+      var label =  this.add.image(130, 469, 'labal1').setInteractive();
+        /*
+        var sprite = this.add.sprite(400, 300, 'eye').setInteractive();
+        */
         label.on('pointerdown', function (pointer) {
 
         console.log("down");
