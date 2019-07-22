@@ -73,11 +73,7 @@ var platforms;
     function create ()
     {
         
-        var line = new Phaser.Geom.Line(100, 500, 700, 100);
-
-    var graphics = this.add.graphics({ lineStyle: { width: 4, color: 0xaa00aa } });
-
-    graphics.strokeLineShape(line);
+        
         /*создаем размешаем фон координаты указаны по центру но можно по верхенму левому --
         this.add.image(0, 0, 'sky').setOrigin(0, 0)*/
 /*
@@ -85,6 +81,13 @@ var platforms;
         platforms.create(0, 703, 'girl').setOrigin(0, 0);
 */
         this.add.image(0, 0, 'backgraund').setOrigin(0, 0);
+        
+        var line = new Phaser.Geom.Line(100, 500, 700, 100);
+
+    var graphics = this.add.graphics({ lineStyle: { width: 4, color: 0xaa00aa } });
+
+    graphics.strokeLineShape(line);
+        
       girl= this.matter.add.image(0, 703, 'girl').setOrigin(0, 0);
         /*
         girl.alpha = 0.5;
