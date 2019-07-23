@@ -181,23 +181,23 @@ timedEvent = this.time.delayedCall(2500, onEvent, [], this);
         if (strelka.y < 678 && s==0) {
             strelka.y = strelka.y + 1;
             s=0;
-            krug.alpha = krug.alpha-0.01;
+            krug.alpha = krug.alpha-0.1;
             }
         if (strelka.y == 678 && s==0) {
             strelka.y = strelka.y - 1;
             s=1;
-            krug.alpha = krug.alpha+0.01;
+            krug.alpha = krug.alpha+0.1;
             
             }
         if (strelka.y > 668 && s==1) {
             strelka.y = strelka.y - 1;
             s=1
-            krug.alpha = krug.alpha+0.01;
+            krug.alpha = krug.alpha+0.1;
             }
         if (strelka.y == 668 && s==1) {
             strelka.y = strelka.y + 1;
             s=0;
-            krug.alpha = krug.alpha-0.01;
+            krug.alpha = krug.alpha-0.1;
             }
         
         
