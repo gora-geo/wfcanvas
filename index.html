@@ -172,14 +172,8 @@ timedEvent = this.time.delayedCall(5000, onEvent, [], this);
 
     function update ()
     {
-         girl.x = girl.x +10;
-        strelka.y = strelka.y + 10;
-        girl.alpha = girl.alpha-0.01;
-        /*
-         Phaser.Actions.RotateAround( girl, { x: 400, y: 300 }, 0.01);
-         */
-        
-        girl.setOrigin(0, 0);
+        if (girl) {
+            girl.setOrigin(0, 0);
 girl.angle++;
 /*Для правого верхнего угла:*/
 
@@ -193,6 +187,16 @@ girl.angle++;
 
 girl.setOrigin(0, 1);
 girl.angle++;
+        }
+        
+         girl.x = girl.x +10;
+        strelka.y = strelka.y + 10;
+        girl.alpha = girl.alpha-0.01;
+        /*
+         Phaser.Actions.RotateAround( girl, { x: 400, y: 300 }, 0.01);
+         */
+        
+        
         
         /*
         console.log(girl.Alpha);
