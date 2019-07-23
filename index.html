@@ -69,6 +69,7 @@
 var timedEvent;
 var platforms;
     var strelka;
+    var t = 0;
 
     var game = new Phaser.Game(config);
 
@@ -172,7 +173,7 @@ timedEvent = this.time.delayedCall(5000, onEvent, [], this);
 
     function update ()
     {
-        if (girl) {
+        if (t==0) {
             girl.setOrigin(0, 0);
 girl.angle++;
 /*Для правого верхнего угла:*/
@@ -215,6 +216,7 @@ girl.angle++;
 
     function onEvent ()
 {
+    t==1;
     this.add.image(-30, 731, 'krug').setOrigin(0, 0);
    /* girl.kill();*/
     girl.destroy(true); 
