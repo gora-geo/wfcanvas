@@ -82,6 +82,13 @@ var platforms;
         this.load.image('labal1', 'sprites/1_0000s_0002_Group-9.png');
         this.load.image('krug', 'sprites/1.png');
         this.load.image('strelka', 'sprites/1_0000_arrowdown.png');
+        this.load.image('boy1', 'sprites/Untitled-1_0000_Garen1.png');
+        this.load.image('meh', 'sprites/Untitled-1_0001_Hand_L_3--copy.png');
+        this.load.image('zlo0', 'sprites/1_0000s_0002s_0001_Layer-100.png');
+        this.load.image('zlo1', 'sprites/1_0000s_0002s_0000_Group-2.png');
+        this.load.image('zlo2', 'sprites/1_0000s_0002s_0002_Орк-воин.png');
+        
+        
 
      
     }
@@ -105,6 +112,8 @@ var platforms;
     graphics.strokeLineShape(line);
         
       girl= this.matter.add.image(0, 703, 'girl').setOrigin(0, 0);
+        meh = this.matter.add.image(0, 703, 'meh').setOrigin(0, 0);
+        boy1  =  this.matter.add.image(240, 668, 'boy1').setOrigin(0, 0);
         /*
         girl.alpha = 0.5;
         */
@@ -201,28 +210,36 @@ timedEvent = this.time.delayedCall(2500, onEvent, [], this);
             }
         
         
-        
+        /*
         
         if (t==0) {
             girl.setOrigin(0, 0);
 girl.angle++;
-/*Для правого верхнего угла:*/
 
+*/
+/*Для правого верхнего угла:*/
+/*
 girl.setOrigin(1, 0);
 girl.angle++;
-/*Для бота в правом углу:*/
 
+*/
+/*Для бота в правом углу:*/
+/*
 girl.setOrigin(1, 1);
 girl.angle++;
+*/
 /*Для левого угла бота:*/
-
+/*
 girl.setOrigin(0, 1);
 girl.angle++;
+*/
         }
         /*
          girl.x = girl.x +10;
         */
+    /*
         girl.alpha = girl.alpha-0.01;
+        */
         /*
          Phaser.Actions.RotateAround( girl, { x: 400, y: 300 }, 0.01);
          */
@@ -250,12 +267,19 @@ girl.angle++;
     krug.alpha = 1;
     strelka.destroy(true); 
     strelka = 'null';
+    label.destroy(true); 
+    label = 'null';
     
     t=1;
     this.add.image(-30, 731, 'krug').setOrigin(0, 0);
    /* girl.kill();*/
     girl.destroy(true); 
     girl = 'null';
+    zlo0 =  this.add.image(-45, 260, 'zlo0').setOrigin(0, 0);
+    zlo1 =  this.add.image(25, 170, 'zlo1').setOrigin(0, 0);
+    zlo2 =  this.add.image(349, 408, 'zlo1').setOrigin(0, 0);
+    
+    
     
      
 }
