@@ -132,6 +132,7 @@ var platforms;
     });
         
        strelka =  this.matter.add.image(320, 670, 'strelka').setOrigin(0, 0);
+       krug =  this.add.image(-30, 731, 'krug').setOrigin(0, 0);
         
         /*
         
@@ -180,19 +181,23 @@ timedEvent = this.time.delayedCall(2500, onEvent, [], this);
         if (strelka.y < 678 && s==0) {
             strelka.y = strelka.y + 1;
             s=0;
+            krug.alpha = krug.alpha-0.01;
             }
         if (strelka.y == 678 && s==0) {
             strelka.y = strelka.y - 1;
             s=1;
+            krug.alpha = krug.alpha+0.01;
             
             }
         if (strelka.y > 668 && s==1) {
             strelka.y = strelka.y - 1;
             s=1
+            krug.alpha = krug.alpha+0.01;
             }
         if (strelka.y == 668 && s==1) {
             strelka.y = strelka.y + 1;
             s=0;
+            krug.alpha = krug.alpha-0.01;
             }
         
         
