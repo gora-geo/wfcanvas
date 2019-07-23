@@ -137,11 +137,13 @@ var platforms;
         
         this.add.overlap(girl, strelka, collectStar, null, this);
         */
-        
+        /*
         this.matter.world.on('collisionstart', function (event, girl, strelka) {
 
        girl.gameObject.setTint(0xff0000);
         strelka.gameObject.setTint(0x00ff00);
+        
+        */
 
     });
 
@@ -211,9 +213,9 @@ girl.angle++;
 girl.setOrigin(0, 1);
 girl.angle++;
         }
-        
+        /*
          girl.x = girl.x +10;
-        
+        */
         girl.alpha = girl.alpha-0.01;
         /*
          Phaser.Actions.RotateAround( girl, { x: 400, y: 300 }, 0.01);
